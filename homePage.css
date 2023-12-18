@@ -307,13 +307,13 @@ body {
 }
 
 .counter-section {
-    padding: 1%;
     height: 500px;
     overflow: hidden;
     width: 100%;
 }
 
 .counter-section-container {
+    padding: 1%;
     margin: 2% 1% 2% 2%;
 }
 
