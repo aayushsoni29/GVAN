@@ -27,8 +27,7 @@
 
         <section class="join-us-button-section">
             <div class="join_us_button_group">
-                <a class="join_us_button" href="join-us-form-link" target="_blank" rel="noopener noreferrer">Join
-                    Us</a>
+                <a class="join_us_button" href="#" onclick="openModal()">Join Us</a>
                 <!-- <a class="explore_button" href="explore-scroll-down" target="_blank"
                     rel="noopener noreferrer">Explore</a> -->
             </div>
@@ -53,8 +52,8 @@
                         <h2 class="vision-mission-headline">Our Vision
                             <hr class="vision-mission-headline-hr ">
                         </h2>
-                        <p class="vision-mission-body word-break">Aligns with the UN's motivation towards environmental
-                            issues.</p>
+                        <p class="vision-mission-body word-break">The vision of planting trees involves creating a sustainable and resilient environment where thriving forests play a
+                        crucial role. Ultimately, the vision is about fostering a harmonious coexistence between humanity and the planet.</p>
                     </div>
                 </div>
 
@@ -66,8 +65,9 @@
                         <h2 class="vision-mission-headline">Our Mission
                             <hr class="vision-mission-headline-hr ">
                         </h2>
-                        <p class="vision-mission-body word-break"> isn't just planting more trees but also looking after
-                            them.</p>
+                        <p class="vision-mission-body word-break"> The mission of planting trees is multifaceted. It aims to combat climate change by absorbing carbon dioxide, support
+                        biodiversity by providing habitats, prevent soil erosion, and contribute to overall environmental sustainability.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -163,6 +163,19 @@
         </section>
     </section>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!-- Close button -->
+            <span class="close" onclick="closeModal()">&times;</span>
+    
+            <!-- Embedded Google Form -->
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScd2TQbyWdSaUVszTOgyz9WQMZ6lNYcXBWkD5sZZGDYQBKTRQ/viewform?embedded=true"
+                width="640" height="1539" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
     <footer class="footer">
         <p>&copy; 2023 GVAN. All rights reserved.</p>
     </footer>
@@ -170,6 +183,23 @@
 
 
 <script>
+    
+    function openModal() {
+        document.getElementById('myModal').style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function (event) {
+        var modal = document.getElementById('myModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
 
     // FADE-IN animation
     document.addEventListener('DOMContentLoaded', function () {
